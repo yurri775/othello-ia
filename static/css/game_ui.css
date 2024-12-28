@@ -1,0 +1,107 @@
+#othello_grid {
+  display: grid;
+  gap: 3px;
+  background-color: #000000;
+  /*height: 100%;*/
+  /*position: relative;*/
+  padding: 8px;
+  grid-template-columns: repeat(8, 1fr);
+}
+
+#othello_grid > div {
+  background-color: #228B22;
+  height: 100%;
+  width: 100%;
+}
+
+.othello_coin {
+    height: 80%;
+    width: 80%;
+    margin: 10% 10%;
+    background-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+}
+
+#content {
+    display: grid; 
+    grid-template-columns: 50% 40%;
+    gap:5%;
+    height: 500px;
+    padding-left: 20px;
+}
+
+#right_panel {
+    background-color: #FFFFFF;
+    height: auto;
+    width: auto;
+    display: inline;
+}
+
+#coin_choice {
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    padding: 20px;
+    align-items: center;
+}
+
+.coin_choice_btn, .ai_choice_btn {
+    height: 50px;
+    width: 110px;
+    background-color: #228B22;
+    color: #FFFFFF;
+    align-items: center;
+    border-radius: 5px;
+    border-width: 3px;
+    border-color: #228B22;
+    border-style: solid;
+    font-size: 25px;
+}
+
+.ai_choice_btn {
+    width: auto;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+#ai_slider{
+    -webkit-appearance: none;
+    /*width: 100%;*/
+    height: 10px;
+    outline: none;
+    background: #228B22;
+}
+
+#score_display_grid{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10%;
+}
+
+.score_coin, .score, #score_display_turn, #winner {
+    display: inline;
+    font-size: 40px;
+    border-style: solid;
+    border-color: #228B22;
+    background-color: #228B22;
+    color: #FFFFFF;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#winner {
+    display: none;
+    width: auto;
+}
+
+#reset_game {
+    width: 100%;
+    background-color: #FF9994;
+    color: #FF2015;
+    border-color: #FF9994;
+}

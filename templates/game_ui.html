@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Othello-RL</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/game_ui.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/game_ui.js') }}"></script>
+</head>
+<body>
+    <h1 id="page_title" align="center">Jeu d'Othello</h1>
+    <div id="content">
+        <div id="othello_grid"></div>
+        <div id="right_panel">
+            <div class="ai_difficulty">
+                <h2 id="ai_slider_val">Sélectionnez le niveau de difficulté de l'IA (Actuel 5/10)</h2>
+                <input type="range" min="1" max="10" value="5" step="1" id="ai_slider" oninput="diff_val()">
+            </div>
+            <div id="ai_choice">
+                <h2>Sélectionnez l'IA contre laquelle jouer</h2>
+                {% for k, v in players.items() %}
+                    <button class="ai_choice_btn" onclick="ai_choice('{{ k }}')">{{ v }}</button>
+                {% endfor %}
+            </div>
+            </form>
+        </div>
+    </div>
+</body>
